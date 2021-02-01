@@ -11,6 +11,8 @@ $('#blogTitlePreview').text(title);
 $('#blogContentPreview').html(content);
 */
 
+$('#flashMessage').hide();
+
 $('#previewButton').click(function(){
   const title = $('#blogTitleInput').val();
   //console.log(title);
@@ -18,4 +20,9 @@ $('#previewButton').click(function(){
                     
    $('#blogTitlePreview').text(title); 
    $('#blogContentPreview').html(content);
+  
+  $('#flashMessage')
+  .slideDown(1000)
+  .delay(3000)
+  .slideUp();
 });
